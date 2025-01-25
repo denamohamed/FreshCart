@@ -75,7 +75,7 @@ export default function Navbar() {
 
                     </ul>
 
-                    <ul className='flex gap-5 items-center'>
+                    {token ? (<ul className='flex gap-5 items-center'>
                         <li>
                             <Link to="/wishlist">
                                 <i className="fa-solid fa-heart text-lg"></i>
@@ -94,7 +94,7 @@ export default function Navbar() {
                                 </span>
                             </Link>
                         </li>
-                    </ul>
+                    </ul>):('')}
 
 
                     <ul className='flex gap-5 items-center'>
