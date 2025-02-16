@@ -9,7 +9,7 @@ export const wishlistContext = createContext(null);
 
 export default function WishListProvider({ children }) {
   const { token } = useContext(userContext);
-  const [wishListInfo, setWishListInfo] = useState(null);
+  const [wishListInfo, setWishListInfo] = useState([]);
 
   async function getUserWishList() {
     try {

@@ -23,11 +23,13 @@ export default function WishList() {
 
 
                 {wishListInfo ?
-                    (<section className='bg-slate-100 p-5 rounded my-6'>
+                    (
+                    <section className='bg-slate-100 p-5 rounded my-6'>
                         <h2 className='text-2xl font-bold'>
                             WishList
                             <i className="fa-solid fa-heart text-red-500 ms-2"></i> :
-                        </h2>
+                            </h2>
+                            
                         {wishListInfo?.length === 0 ?
                             (<div className='py-16 flex items-center justify-center flex-col gap-3' >
                                 <p className='text-lg'>
@@ -36,9 +38,6 @@ export default function WishList() {
                                 <Link className='btn-primary' to={"/"}>ADD PRODUCTS TO WISHLIST</Link>
                             </div>) :
                             (<>
-
-
-
                                 <div className=' grid grid-cols-12 gap-3 my-7'>
                                     {wishListInfo?.map((product) => (
                                         <div className='overflow-hidden rounded-md shadow-lg col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-2 ' key={product._id}>
@@ -88,12 +87,10 @@ export default function WishList() {
                             </>)}
 
 
-                    </section>) : (<Loading />)}
-
+                    </section>
+                    ) : (<Loading />)}
             </>
-
-
-
         </>
     )
 }
+

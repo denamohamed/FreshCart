@@ -48,6 +48,12 @@ export default function Login() {
     onSubmit:sendDataToLogin,
   })
 
+  function handleForgotPassword () {
+    toast.loading("Redirecting...", { duration: 3000 });
+    setTimeout(() => {
+      navigate('/auth/forgetpassword');
+    }, 3000);  
+  }
 
   return (
     <>
@@ -86,10 +92,18 @@ export default function Login() {
             {formik.errors.password && formik.touched.password ?
             (<p className='text-red-500 p-2'>{formik.errors.password}</p>):("")}
             </div>
-            <button className="btn-primary my-2" type='submit'>LogIn</button>
+            <button className="btn-primary my-2 border-0" type='submit'>LogIn</button>
+            <button
+            type='button'
+            className='btn-primary bg-red-600 border-0 ms-3'
+            onClick={handleForgotPassword}
+           >
+            Forget Password?
+          </button>
           </form>
         </div>
       </section>
     </>
   )
 }
+

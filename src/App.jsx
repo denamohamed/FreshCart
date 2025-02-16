@@ -20,6 +20,8 @@ import WishList from './Pages/WishList/WishList'
 import Orders from './Pages/Orders/Orders'
 import CreateOrder from './Pages/Checkout/Checkout'
 import Checkout from './Pages/Checkout/Checkout'
+import ForgetPassword from './Pages/ForgetPassword/ForgetPassword';
+import ResetPassword from './Pages/RessetPassword/RessetPassword';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
@@ -51,7 +53,9 @@ function App() {
     {
       path: "/auth", element: <Layout />, children: [
         { path: "login", element: <Login /> },
-        { path: "register", element: <Register /> }
+        { path: "register", element: <Register /> },
+        { path: "forgetpassword", element: <ForgetPassword /> },
+        { path: "resetPassword", element: <ResetPassword /> }
       ]
     }
   ])
@@ -74,3 +78,6 @@ function App() {
 }
 
 export default App
+
+
+
