@@ -53,7 +53,7 @@ export default function CartComponent({ productInfo }) {
                 </div>
                 <div className='p-3'>
                     <h3 className='text-primary  text-lg'>{category.name}</h3>
-                    <p className='text-sm text-slate-500 pb-2 '>Brand : {brand.name}</p>
+{/*                     <p className='text-sm text-slate-500 pb-2 '>Brand : {brand.name}</p> */}
                     <p className=' font-semibold pb-2 ' >{title.split('', 20).join("")}</p>
                     <p className='text-primary text-xs'>Quantaty : {quantity}</p>
                     <div className='flex justify-between items-center mt-5 my-2'>
