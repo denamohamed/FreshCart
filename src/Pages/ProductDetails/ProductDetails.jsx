@@ -46,7 +46,7 @@ export default function ProductDetails() {
                         <h3 className='font-semibold text-xl'>{productDetails.title}</h3>
                         <span className='text-primary font-semibold'>{productDetails.category.name}</span>
                         <p className='text-slate-500 my-2'>{productDetails.description}</p>
-                        <p><span className='text-primary'>Brand :</span> {productDetails.brand.name}</p>
+{/*                         <p><span className='text-primary'>Brand :</span> {productDetails.brand.name}</p> */}
                         <div className='flex justify-between items-center mt-2 mb-4'>
                             <p><span className='text-primary'>Remaining :</span> {productDetails.quantity}</p>
                             <p><span className='text-primary'>Sold :</span> {productDetails.sold}</p>
